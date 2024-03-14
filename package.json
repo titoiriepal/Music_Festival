@@ -1,0 +1,18 @@
+{
+  "name": "music_festival",
+  "version": "1.0.0",
+  "description": "Web learn project about a music festival with Gulp, Sass and Html",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/scss:build/css"
+  },
+  "keywords": [
+    "SASS",
+    "Gulp"
+  ],
+  "author": "Tito Ramos",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.72.0"
+  }
+}
