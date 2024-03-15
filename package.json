@@ -4,7 +4,9 @@
   "description": "Web learn project about a music festival with Gulp, Sass and Html",
   "main": "index.js",
   "scripts": {
-    "sass": "sass src/scss:build/css"
+    "sass": "sass --watch src/scss:build/css",
+    "tarea": "gulp tarea",
+    "dev": "gulp dev"
   },
   "keywords": [
     "SASS",
@@ -13,6 +15,9 @@
   "author": "Tito Ramos",
   "license": "ISC",
   "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
     "sass": "^1.72.0"
   }
 }
