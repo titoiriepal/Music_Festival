@@ -308,13 +308,11 @@ template {
 }
 
 html {
-  font-size: 62.5%;
   box-sizing: border-box;
+  font-size: 62.5%; /*1rem = 10px*/
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: inherit;
 }
 
@@ -326,6 +324,7 @@ body {
 p {
   font-size: 2rem;
   color: #000000;
+  line-height: 1.5;
 }
 
 a {
@@ -346,6 +345,11 @@ h2 {
 
 h3 {
   font-size: 2rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 .contenedor {
@@ -398,4 +402,98 @@ h3 {
 }
 .navegacion-principal a:hover {
   color: #fef46d;
+}
+
+.video {
+  position: relative;
+  max-height: 70rem;
+  min-height: 50rem;
+  overflow: hidden;
+}
+.video .overlay {
+  position: absolute;
+  background: rgb(128, 0, 163);
+  background: linear-gradient(313deg, rgba(128, 0, 163, 0.5020133053) 0%, rgba(255, 0, 160, 0.3031337535) 100%);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.video video {
+  width: auto;
+  display: block;
+}
+@media (min-width: 992px) {
+  .video video {
+    width: 100%;
+  }
+}
+
+.contenido_video {
+  z-index: 1;
+}
+.contenido_video h2 {
+  color: #ffffff;
+  font-size: 3rem;
+  margin: 0;
+}
+.contenido_video p {
+  background-color: #f53756;
+  display: inline-block;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin: 0;
+}
+@media (min-width: 480px) {
+  .contenido_video h2 {
+    font-size: 4.5rem;
+  }
+  .contenido_video p {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 798px) {
+  .contenido_video h2 {
+    font-size: 7rem;
+  }
+  .contenido_video p {
+    font-size: 2.4rem;
+  }
+}
+
+.sobre-festival {
+  padding: 5rem 0;
+}
+@media (min-width: 798px) {
+  .sobre-festival {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+
+.contenido-festival {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width: 798px) {
+  .contenido-festival {
+    margin-top: 0;
+  }
+}
+.contenido-festival h2 {
+  margin-bottom: 2rem;
+}
+.contenido-festival p {
+  margin: 0;
+}
+.contenido-festival .fecha {
+  margin-bottom: 2rem;
+  color: #f53756;
+  font-weight: bold;
 }
