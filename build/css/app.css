@@ -363,7 +363,7 @@ img {
   box-shadow: 0 8px 32px 0 rgba(7, 8, 17, 0.6941176471);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-radius: 0% 0% 4% 6%/0% 0% 4% 6%;
+  border-radius: 0% 0% 4% 6%/0% 0% 6% 4%;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 .header h1 {
@@ -508,4 +508,77 @@ img {
   margin-bottom: 2rem;
   color: #f53756;
   font-weight: bold;
+}
+
+.lineup {
+  background-color: #f53756;
+  padding: 5rem 0;
+}
+.lineup h3, .lineup p {
+  text-align: center;
+  color: #ffffff;
+}
+.lineup .dia {
+  text-transform: uppercase;
+  margin: 5rem 0;
+}
+
+@media (min-width: 798px) {
+  .escenarios-contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+.escenarios-contenedor p {
+  color: #000000;
+}
+
+.escenario {
+  padding-top: 2rem;
+}
+.escenario .nombre-escenario:after {
+  content: "";
+  display: block;
+  width: 20rem;
+  height: 10rem;
+  background-size: 15rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 2rem auto 0 auto;
+}
+
+.edm .nombre-escenario:after {
+  background-image: url(../img/icono_edm.png);
+}
+
+.rock .nombre-escenario:after {
+  background-image: url(../img/icono_rock.png);
+}
+
+.calendario {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.calendario li {
+  padding: 2.5rem;
+  font-weight: bold;
+}
+.calendario li span {
+  font-weight: normal;
+}
+
+.bg-amarillo {
+  background-color: #fef46d;
+}
+.bg-amarillo li:nth-child(odd) {
+  background-color: #fdee21;
+}
+
+.bg-verde {
+  background-color: #4cb8b3;
+}
+.bg-verde li:nth-child(odd) {
+  background-color: #3b9691;
 }
