@@ -359,7 +359,12 @@ img {
 }
 
 .header {
-  background-color: #4cb8b3;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(7, 8, 17, 0.6941176471);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 0% 0% 4% 6%/0% 0% 4% 6%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 .header h1 {
   color: #ffffff;
@@ -418,7 +423,7 @@ img {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 }
 .video video {
   width: auto;
@@ -434,15 +439,6 @@ img {
   z-index: 1;
   padding: 5rem;
   min-width: 27.7rem;
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(7, 8, 17, 0.6941176471);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 47% 5% 61% 6%/47% 5% 48% 6%;
-  border-bottom: 10px inset rgba(255, 255, 255, 0.18);
-  border-right: 10px inset rgba(255, 255, 255, 0.18);
-  border-top: 1px inset rgba(255, 255, 255, 0.18);
-  border-left: 1px inset rgba(255, 255, 255, 0.18);
 }
 @media (min-width: 480px) {
   .contenido_video {
