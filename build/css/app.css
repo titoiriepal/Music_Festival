@@ -368,6 +368,15 @@ img {
   -webkit-backdrop-filter: blur(10px);
   border-radius: 0% 0% 4% 6%/0% 0% 6% 4%;
   border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 1;
+}
+@media (min-width: 798px) {
+  .header.fijo {
+    position: fixed;
+  }
+  .header.fijo h1, .header.fijo a {
+    text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000;
+  }
 }
 .header h1 {
   color: #ffffff;

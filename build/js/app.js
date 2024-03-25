@@ -5,7 +5,36 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 function iniciarApp(){
+    navegacionFija();
     crearGaleria();
+    ScrollNav();
+}
+
+function navegacionFija(){
+    const menu = document.querySelector('.header');
+    const baliza= document.querySelector('.sobre-festival');
+
+    window.addEventListener('scroll', function(){
+        
+
+        if(baliza.getBoundingClientRect().top<0){
+            menu.classList.add('fijo');
+        }else{
+            menu.classList.remove('fijo');
+        }
+    });
+}
+
+function ScrollNav(){
+    const enlaces = document.querySelectorAll('.navegacion-principal a');
+    enlaces.forEach( enlace =>{
+        enlace.addEventListener("click", function(e) {
+            e.preventDefault(); //evitamos que se recargue la página al hacer click
+            const seccionScroll = e.target.attributes.href.value;
+            const seccion = document.querySelector(seccionScroll);
+            seccion.scrollIntoView({behavior: "smooth"});
+        });
+    })
 }
 
 
